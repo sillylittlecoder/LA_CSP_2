@@ -1,2 +1,5 @@
 # LA First Program
-first = input("Hey there! What is your name?: ")
+
+name = input("Hey there! What is your name?: ")
+
+print("Hello", name)
