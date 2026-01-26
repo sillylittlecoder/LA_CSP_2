@@ -1,7 +1,11 @@
-# LA financial calculator
+# LA Financial Calculator
 
-first = input("What is your monthly income: ")
+first = input("What is your monthly income: $")
 
-second = input("What is your monthly rent/mortgage: ")
+second = input("What is your monthly rent/mortgage: $")
 
-third = input("What is your monthly utilities: ")
+third = input("What is your monthly utilities: $")
+
+fourth = ("What is your monthly groceries: $")
+
+fifth = ("What is your monthly transportation: $")
