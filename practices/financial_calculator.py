@@ -1,11 +1,15 @@
 # LA Financial Calculator
 
-first = input("What is your monthly income: $")
+income = input("What is your monthly income: $")
 
-second = input("What is your monthly rent/mortgage: $")
+rent = input("What is your monthly rent/mortgage: $")
 
-third = input("What is your monthly utilities: $")
+utilities = input("What is your monthly utilities: $")
 
-fourth = ("What is your monthly groceries: $")
+groceries = input("What is your monthly groceries: $")
 
-fifth = ("What is your monthly transportation: $")
+transportation = input("What is your monthly transportation: $")
+
+print("Your income is", income, "and that is", (rent/income)*100, "of your income")
+print("Your utilities are", utilities, "and that is", (utilities/income)*100, "of your income")
+print("Your groceries are", groceries, "and that is", (groceries/income)*100,"of your income")
