@@ -1,5 +1,5 @@
 # LA silly sentences
-person = input("Give me a person(name, celebrity, etc.): ").strip().title
+person = input("Give me a person's name: ").strip()
 adjective = input("Give me an adjective: ").strip()
 adjective2 = input("Give me another adjective!: ").strip()
 noun = input("Give me a proper noun: ").strip()
@@ -12,4 +12,4 @@ verb2 = input("Give me a second past tense verb: ").strip()
 verb3 = input("Give me a third past tense verb: ").strip()
 verb4 = input("One last verb please: ").strip()
 
-print("Yesterday,"+" "+person+" "+"and I went to the park. On our way to the"+adjective+" "+"park, we saw a"+" "+adjective2+" "+noun+" "+"on a bike. We also saw big"+" "+adjective3+" "+"balloons tied to a"+" "+noun2+".Once we got to the"+" "+adjective+" "+"park, the sky turned"+adjective4+"." + "It started to"+" "+verb+" "+"and"+" "+verb2+"."+person +" and I"+" "+verb3+" all the way home. Tomorrow we will try to go to the"+" "+ adjective + "playground again and hope it doesn't" +" "+verb4+".")
+print ("Yesterday," + " " + person + " " + "and I went to the park. On our way to the" + adjective + " " + "park, we saw a" + " " + adjective2 + " " + noun + " " + "on a bike. We also saw big" + " " + adjective3 + " " + "balloons tied to a"+" "+noun2 + "." + "Once we got to the" + " " + adjective + " "+ "park, the sky turned" + adjective4 + "." + "It started to" + " " + verb+ " " + "and" + " " + verb2 + "."+ person + " " + "and I" + " " + verb3+ " all the way home. Tomorrow we will try to go to the" + " " + adjective + "park again and hope it doesn't" + " " + verb4 + ".")
