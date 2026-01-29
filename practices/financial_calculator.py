@@ -1,16 +1,20 @@
 # LA Financial Calculator
 
-income = input("What is your monthly income: $")
+income = int(input("What is your monthly income: $"))
 
-rent = input("What is your monthly rent/mortgage: $")
+rent = int(input("What is your monthly rent/mortgage: $"))
 
-utilities = input("What is your monthly utilities: $")
+utilities = int(input("What is your monthly utilities: $"))
 
-groceries = input("What is your monthly groceries: $")
+groceries = int(input("What is your monthly groceries: $"))
 
-transportation = input("What is your monthly transportation: $")
+transportation = int(input("What is your monthly transportation: $"))
 
-print("Your income is", income, "and that is", (rent/income)*100, "of your income")
-print("Your utilities are", utilities, "and that is", (utilities/income)*100, "of your income")
-print("Your groceries are", groceries, "and that is", (groceries/income)*100,"of your income")
-print("Your transportation is", transportation)
+savings = round(income*.1,2)
+
+print("Your rent is $", rent, "and that is %", round(rent / income,2)*100, "of your income")
+print("Your utilities are $", utilities, "and that is %", round(utilities / income,2)*100, "of your income")
+print("Your groceries are $", groceries, "and that is %", round(groceries / income,2)*100,"of your income")
+print("Your transportation is $", transportation, "and that is %", round(transportation / income,2)*100, "of your income")
+print("You should be save $", savings, "a month, that is %", round(savings/income,2), "of your income")
+print("You have $", (income-rent-utilities-groceries-transportation), "of spending money each month!")
