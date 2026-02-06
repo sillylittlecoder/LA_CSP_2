@@ -4,9 +4,20 @@ def monthly(money):
     input(f"What is your monthly {money}")
     return
 
-income = monthly("income?")
+def cost(total, money):
+    print(f"Your {money} is {total} and that is ")
+
+income = monthly("income? ")
+rent_mortgage = monthly("rent/mortgage? ")
+utilities = monthly("utilities? ")
+groceries = monthly("groceries? ")
+transportation = monthly("transportation? ")
+savings = monthly(round(income*.1,2))
 
 
+"""def budget(total):
+    print("Your {total} is " )
+"""
 
 """income = int(input("What is your monthly income: $"))
 
