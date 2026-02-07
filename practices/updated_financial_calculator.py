@@ -1,39 +1,20 @@
 # LA Updated Financial Calculator
 
 def monthly(money):
-    input(f"What is your monthly {money}")
-    return
-
-def cost(total, money):
-    print(f"Your {money} is {total} and that is ")
+   return int(input(f"What is your monthly {money}"))
 
 income = monthly("income? ")
 rent_mortgage = monthly("rent/mortgage? ")
 utilities = monthly("utilities? ")
 groceries = monthly("groceries? ")
 transportation = monthly("transportation? ")
-savings = monthly(round(income*.1,2))
+savings =round(income*.1,2)
 
+def percent(income, expenses):
+    return round((expenses / income) * 100,2)
 
-"""def budget(total):
-    print("Your {total} is " )
-"""
-
-"""income = int(input("What is your monthly income: $"))
-
-rent = int(input("What is your monthly rent/mortgage: $"))
-
-utilities = int(input("What is your monthly utilities: $"))
-
-groceries = int(input("What is your monthly groceries: $"))
-
-transportation = int(input("What is your monthly transportation: $"))
-
-savings = round(income*.1,2)
-
-print("Your rent is $", rent, "and that is %", round(rent / income,2)*100, "of your income")
-print("Your utilities are $", utilities, "and that is %", round(utilities / income,2)*100, "of your income")
-print("Your groceries are $", groceries, "and that is %", round(groceries / income,2)*100,"of your income")
-print("Your transportation is $", transportation, "and that is %", round(transportation / income,2)*100, "of your income")
-print("You should be save $", savings, "a month, that is %", round(savings/income,2), "of your income")
-print("You have $", (income-rent-utilities-groceries-transportation), "of spending money each month!")"""
+print("Your rent is $", rent_mortgage, "and that is", percent(income, rent_mortgage), "%", "of your income")
+print("Your utilities are $", utilities, "and that is", percent(income, utilities), "%", "of your income")
+print("Your groceries are $", groceries, "and that is", percent(income, groceries), "%", "of your income")
+print("Your transportation is $", transportation, "and that is", percent(income, transportation), "%", "of your income")
+print("You should save $", savings, "which is", percent(income, savings), "%", "of your income")
