@@ -9,7 +9,7 @@ loss = 0
 while True:
     display = ""
     
-    guess = input("guess a singular letter: ")
+    guess = input("guess a singular letter: ").lower()
 
 
     print(display)
