@@ -6,6 +6,8 @@ print("Instructions: To play hangman, you will be given a word you need to guess
 
 letter = []
 loss = 0
+
+
 while True:
     display = ""
     
@@ -18,8 +20,8 @@ while True:
         print("You won!")
         break
 
-    """if guess not in random: 
-        loss += 1"""    
+    for (a) in word:
+        
 
     '''--------
    |      |
