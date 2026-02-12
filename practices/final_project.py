@@ -4,14 +4,27 @@ word = random.choice(words)
 
 print("Instructions: To play hangman, you will be given a word you need to guess(by letter). Every time you guess a letter wrong, one part of a person will be built. If you end up guessing all the letters in the word, you win. However, if you guess too many wrong times and the person is built, you lose.")
 
-letter = []
+let_list = []
 loss = 0
+
+def singular_letter(user_input):
+    if user_input == singular_letter:
+        text.replace("-", "{user_input}")
+
+
 
 
 while True:
     display = ""
+    for letter in word:
+        let_list.append
+        
+    else:
+        loss += 1
+    
     
     guess = input("guess a singular letter: ").lower()
+    check(guess)
 
 
     print(display)
@@ -20,16 +33,6 @@ while True:
         print("You won!")
         break
 
-    for (a) in word:
-        
-
-    '''--------
-   |      |
-   |      O
-   |    \\ | /
-   |     / \\
-   |    -   -
-   --------'''
     if loss == 0:
         print('''              --------
              |      |
@@ -104,4 +107,5 @@ while True:
    |       / \\
    |      -    -
    --------""")
+        break
         print("Wow, eight guesses and you still lost! You have hung hangman.")
