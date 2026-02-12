@@ -5,17 +5,14 @@ random.len()
 
 
 print("Instructions: To play hangman, you will be given a word you need to guess(by letter). Every time you guess a letter wrong, one part of a person will be built. If you end up guessing all the letters in the word, you win. However, if you guess too many wrong times and the person is built, you lose.")
-loss = 0
-letter = []
 
+letter = []
+loss = 0
 while True:
     display = ""
-
+    
     guess = input("guess a singular letter: ")
-    guess.append(letter)
-    for letter in random:
-        if letter == guess:
-          display += letter
+
 
     print(display)
 
@@ -23,8 +20,8 @@ while True:
         print("You won!")
         break
 
-    if guess not in random: 
-        loss += 1    
+    """if guess not in random: 
+        loss += 1"""    
 
     '''--------
    |      |
@@ -34,7 +31,7 @@ while True:
    |    -   -
    --------'''
     if loss == 0:
-        print('''--------
+        print('''              --------
              |      |
              |
              |
