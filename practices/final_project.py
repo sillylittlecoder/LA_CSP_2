@@ -17,8 +17,6 @@ while True:
         if letter == guess:
           display += letter
 
-
-
     print(display)
 
     if letter == display:
