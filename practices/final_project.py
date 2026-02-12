@@ -3,15 +3,6 @@ words = ["Onyx", "Xylaphone", "Glyph", "Syzygy", "Zuzwang", "House", "Dermatogly
 word = random.choice(words)
 random.len()
 
-"""---------
-   |        |
-   |        O
-   |    \\  | /
-   |        /
-   |       / \\
-   --------
-    """
-#work on finishing it
 
 print("Instructions: To play hangman, you will be given a word you need to guess(by letter). Every time you guess a letter wrong, one part of a person will be built. If you end up guessing all the letters in the word, you win. However, if you guess too many wrong times and the person is built, you lose.")
 loss = 0
@@ -111,15 +102,11 @@ while True:
    |    -   
    --------''')
     elif loss == 8:
-        print('''--------
-   |      |
-   |      O
-   |    \\ | /
-   |     / \\
-   |    -   -')
-          print("Wow. ight guesses and you still lost! You have hung hangman.")
-      breakngm'')
-n.")
-    break
-
-ut how to check letters in word and display them
+        print("""---------
+   |        |
+   |        O
+   |    \\  | /
+   |       / \\
+   |      -    -
+   --------""")
+        print("Wow, eight guesses and you still lost! You have hung hangman.")
