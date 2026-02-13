@@ -1,6 +1,6 @@
 import random
-words = ["onyx", "xylaphone", "glyph", "syzygy", "zuzwang", "house", "dermatoglyphics", "xebec", "bdellium", "grawlix",]
-word = random.choice(words)
+words = ["onyx", "xylaphone", "glyph", "syzygy", "zuzwang", "house", "dermatoglyphics", "xebec", "bdellium", "grawlix",] # list of random words
+word = random.choice(words) # picks a random word
 
 print("Instructions: To play hangman, you will be given a word you need to guess(by letter). Every time you guess a letter wrong, one part of a person will be built. If you end up guessing all the letters in the word, you win. However, if you guess too many wrong times and the person is built, you lose.")
 
@@ -17,7 +17,7 @@ def singular_letter(user_input):
 while True:
     under = "_"
     display = "           "
-    for letter in word:
+    for letter in word: #prints the display and chescks if letter is in word
         if letter in let_list:
             print(letter)
         else:
@@ -28,7 +28,7 @@ while True:
     let_list.append(guess)
     print(display)
 
-    if loss == 0:
+    if loss == 0: #all the hang mans and prints if loss condition is met
         print('''              --------
              |      |
              |
