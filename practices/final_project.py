@@ -5,12 +5,22 @@ word = random.choice(words) # picks a random word
 print("Instructions: To play hangman, you will be given a word you need to guess(by letter). Every time you guess a letter wrong, one part of a person will be built. If you end up guessing all the letters in the word, you win. However, if you guess too many wrong times and the person is built, you lose.")
 
 let_list = []
-loss = 0
-total_losses = 8
-
-        
+loss = 1  
 
 while True:
+
+    guess = input("guess a singular letter: ").lower()
+
+    if guess in let_list:
+        print("You've already guessed that!")
+        continue
+
+    let_list.append(guess)
+
+    if guess not in word:
+        loss += 1
+        print("Nope, wrong letter!")
+        
     display = ""
 
     for letter in word:
@@ -18,33 +28,16 @@ while True:
             display += letter
         else:
             display += "_"
-    
-    
-    guess = input("guess a singular letter: ").lower()
-
-    if guess not in word:
-        loss += 1
-        print("Nope, wrong letter!")
+    print(display)
 
     if display == word:
         print("You won!")
-        break
-
-    if loss == 0:
-    under = "_"
-    display = "           "
-    for letter in word: #prints the display and chescks if letter is in word
-        if letter in let_list:
-            print(letter)
-        else:
-            print("_")
-
         
-    guess = input("guess a singular letter: ").lower()
+    """guess = input("guess a singular letter: ").lower()
     let_list.append(guess)
-    print(display)
+    print(display)"""
 
-    if loss == 0: #all the hang mans and prints if loss condition is met
+    if loss == 1: #all the hang mans and prints if loss condition is met
         print('''              --------
              |      |
              |
@@ -52,7 +45,7 @@ while True:
              |  
              |
              --------''')
-    elif loss == 1:
+    elif loss == 2:
         print(
         '''--------
    |      |
@@ -61,7 +54,7 @@ while True:
    |
    |
    --------''')
-    elif loss == 2:
+    elif loss == 3:
         print('''
    --------
    |      |
@@ -70,7 +63,7 @@ while True:
    |
    |
    --------''')
-    elif loss == 3:
+    elif loss == 4:
         print('''--------
    |      |
    |      O
@@ -78,7 +71,7 @@ while True:
    |     / 
    |
    --------''')
-    elif loss == 4:
+    elif loss == 5:
         print( '''--------
    |      |
    |      O
@@ -86,7 +79,7 @@ while True:
    |     / \\
    |    
    --------''')
-    elif loss == 5:
+    elif loss == 6:
         print('''--------
    |      |
    |      O
@@ -94,7 +87,7 @@ while True:
    |     / \\
    |
    --------''')
-    elif loss == 6:
+    elif loss == 7:
         print('''--------
    |      |
    |      O
@@ -102,7 +95,7 @@ while True:
    |     / \\
    |       
    --------''')
-    elif loss == 7:
+    elif loss == 8:
         print('''--------
    |      |
    |      O
@@ -110,13 +103,14 @@ while True:
    |     / \\
    |    -   
    --------''')
-    elif loss == 8:
-        print("""---------
+    elif loss == 9:
+        print('''   ---------
    |        |
    |        O
-   |    \\  | /
+   |      \\ | /
    |       / \\
    |      -    -
-   --------""")
+   --------
+'''
+"Wow, eight guesses and you still lost! You have hung hangman.")
         break
-        print("Wow, eight guesses and you still lost! You have hung hangman.")
