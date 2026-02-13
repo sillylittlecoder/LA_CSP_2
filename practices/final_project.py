@@ -10,32 +10,24 @@ loss = 1
 while True:
 
     guess = input("guess a singular letter: ").lower()
+    display = ""
 
     if guess in let_list:
         print("You've already guessed that!")
-        continue
-
-    let_list.append(guess)
-
-    if guess not in word:
+    elif display == word:
+        print("You won!")
+    elif guess not in word:
         loss += 1
         print("Nope, wrong letter!")
-        
-    display = ""
 
+    let_list.append(guess)
+        
     for letter in word:
         if letter in let_list:
             display += letter
         else:
             display += "_"
     print(display)
-
-    if display == word:
-        print("You won!")
-        
-    """guess = input("guess a singular letter: ").lower()
-    let_list.append(guess)
-    print(display)"""
 
     if loss == 1: #all the hang mans and prints if loss condition is met
         print('''              --------
@@ -112,5 +104,5 @@ while True:
    |      -    -
    --------
 '''
-"Wow, eight guesses and you still lost! You have hung hangman.")
+"Wow, eight guesses and you still lost! The word was:", word)
         break

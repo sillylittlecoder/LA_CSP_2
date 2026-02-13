@@ -1,2 +1,2 @@
-if guess not in random: 
-        loss += 1
+if display == word:
+        print("You won!")
