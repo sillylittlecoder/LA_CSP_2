@@ -6,30 +6,27 @@ print("Instructions: To play hangman, you will be given a word you need to guess
 
 let_list = []
 loss = 0
-
-def singular_letter(user_input):
-    if user_input == singular_letter:
-        text.replace("-", "{user_input}")
-
+total_losses = 8
 
 
 
 while True:
     display = ""
+
     for letter in word:
-        let_list.append
-        
-    else:
-        loss += 1
+        if letter in let_list:
+            display += letter
+        else:
+            display += "_"
     
     
     guess = input("guess a singular letter: ").lower()
-    check(guess)
 
+    if guess not in word:
+        loss += 1
+        print("Nope, wrong letter!")
 
-    print(display)
-
-    if letter == display:
+    if display == word:
         print("You won!")
         break
 
