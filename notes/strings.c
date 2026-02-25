@@ -14,7 +14,7 @@ int main(){
     printf("%s is a cool book!\n", book);
 
 
-    //concatenation
+    //Concatenation
     char first[] = "Vienna";
     char last[] = "Larose";
     char full_name[20];
