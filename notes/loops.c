@@ -4,7 +4,7 @@
 #include <stdbool.h>
 
 int main(){
-    // Example 1
+    // Example 1 while loops
     int i = 1;
     while(i <= 10){
         printf("%d\n", i);
@@ -18,7 +18,7 @@ int main(){
     printf("%d\n", (rand() %10) +1); //random number between 1-10
     printf("%d\n", (rand() %5) +5); //random number between 5-10
 
-     // Example 2
+     // Example 2 while loops
     int goose = (rand() % 20) +1;
     int count = 1;
     while (count < goose){
@@ -27,7 +27,7 @@ int main(){
     }
     printf("GOOSE!\n");
 
-    // Example 3
+    // Example 3 while loops
     int number = (rand() % 30) + 1;
 
     while (true){
