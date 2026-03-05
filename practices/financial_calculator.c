@@ -8,10 +8,10 @@ int main(){
     int utilities;
     int groceries;
     int transportation;
-    float savings;
     float spending;
     printf("What is your monthly income\n");
     scanf("%d", &income);
+    int savings = income * 20/100;
     printf("What is your monthly rent/mortgage\n");
     scanf("%d", &rent_mortgage);
     printf("What is your monthly utilities\n");
@@ -21,12 +21,12 @@ int main(){
     printf("What is your monthly transportation\n");
     scanf("%d", &transportation);
 
-    printf("Your rent is %d and that is %.2f of your income\n", (float) round(rent_mortgage/income));
-    printf("Your utilites are %d and that is %.2f of your income\n", (float) round(utilities/income));
-    printf("Your groceries are %d and that is %.2f of your income\n", (float) round(groceries/income));
-    printf("Your transportation is %d and that is %.2f of your income\n", (float) round(transportation/income));
-    printf("You should save %d a month, and that is %.2f of your income\n", (float) round(savings/income));
-    printf("You have %d of spending money each month\n", (float) income-rent_mortgage-utilities-groceries-transportation);
+    printf("Your rent is %d and that is %.2f of your income\n", rent_mortgage, ((float)rent_mortgage/income)*100);
+    printf("Your utilites are %d and that is %.2f of your income\n", utilities,((float)utilities/income)*100);
+    printf("Your groceries are %d and that is %.2f of your income\n", groceries,((float)groceries/income)*100);
+    printf("Your transportation is %d and that is %.2f of your income\n", transportation, ((float)transportation/income)*100);
+    printf("You should save %d a month, and that is %d of your income\n", savings, (savings * 100) / income);
+    printf("You have %d of spending money each month\n", income-rent_mortgage-utilities-groceries-transportation);
     return 0;
 }
 
