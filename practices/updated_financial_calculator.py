@@ -18,3 +18,4 @@ print("Your utilities are $", utilities, "and that is", percent(income, utilitie
 print("Your groceries are $", groceries, "and that is", percent(income, groceries), "%", "of your income")
 print("Your transportation is $", transportation, "and that is", percent(income, transportation), "%", "of your income")
 print("You should save $", savings, "which is", percent(income, savings), "%", "of your income")
+# divide: part/whole * 100...cost/income * 100
