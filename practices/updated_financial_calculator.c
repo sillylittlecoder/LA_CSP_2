@@ -7,10 +7,6 @@ void monthly(char* money){
     scanf("%s", &money);
 }
 
-void percent(income,expenses){
-    return round((expenses/income)*100,2)
-}
-
 int main(){
     monthly("income");
     monthly("rent/mortgage");
