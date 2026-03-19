@@ -9,25 +9,45 @@ int main(){
     srand(time(NULL));
     int number = rand() % 10;
     int count = 0;
-    char words[][20] = {"onyx", "xylaphone", "glyph", "syzygy", "zuzwang", "house", "dermatoglyphics", "xebec", "bdellium", "grawlix",};
-    printf("%s\n", words[number]);
+    char words[][20] = {"onyx", "xylaphone", "glyph", "syzygy", "zuzwang", "house", "dermatoglyphics", "xebec", "bdellium", "grawlix"};
+    char word[20];
+    strcpy(word, words[number]);
 
 
     printf("Instructions: To play hangman, you will be given a word you need to guess(by letter). Every time you guess a letter wrong, one part of a person will be built. If you end up guessing all the letters in the word, you win. However, if you guess too many wrong times and the person is built, you lose.\n"); 
 
 char let_list[20];
 int loss = 1;
-
+int word_len = sizeof(word)/sizeof(word[0]);
 while (true) {
+    char display[word_len];
     char guess;
     printf("guess a singular letter:\n");
     scanf("%s", &guess);
     
-    int guess_len = sizeof(guess)/sizeof(guess[number]);  //need to figure out why there is an error there
-    for(int x=0; x < guess_len; x++){
-        printf("%d", guess);
+    int correct =0;
+    int incorrect = 0;
+    for(int x=0; x < word_len; x++){
+        if(word[x] == guess){
+            display[x] = guess;
+            correct++;
+        }else{
+            display[x] = '_';
+
+        }
     }
-    char display = ""
+    if(correct == 0){
+        count++;
+        printf("Nope! Wrong letter.\n");
+    }
+    
+    if(guess == ){
+        printf("You've already guessed that!");
+    }else if(display == word){
+        printf("You won!");
+    }else if(guess <= let_list){
+        printf("");
+    }
 //this loop will be for guessing a singular letter and then checking if that letter is in the word
 
 
