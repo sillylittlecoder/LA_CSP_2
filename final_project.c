@@ -8,7 +8,6 @@
 int main(){
     srand(time(NULL));
     int number = rand() % 10;
-    int count = 0;
     char words[][20] = {"onyx", "xylaphone", "glyph", "syzygy", "zuzwang", "house", "dermatoglyphics", "xebec", "bdellium", "grawlix"};
     char word[20];
     strcpy(word, words[number]);
@@ -48,8 +47,6 @@ while (true) {
     }else if(guess <= let_list){
         printf("");
     }
-//this loop will be for guessing a singular letter and then checking if that letter is in the word
-
 
 
     if(loss == 1){
