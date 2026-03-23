@@ -7,11 +7,16 @@
 
 int main(){
     srand(time(NULL));
+
     int number = rand() % 10;
-    char words[][20] = {"onyx", "xylaphone", "glyph", "syzygy", "zuzwang", "house", "dermatoglyphics", "xebec", "bdellium", "grawlix"};
+
+    char words[][20] = {
+        "onyx", "xylaphone", "glyph", "syzygy", "zuzwang",
+        "house", "dermatoglyphics", "xebec", "bdellium", "grawlix"
+    };
+
     char word[20];
     strcpy(word, words[number]);
-
 
     printf("Instructions: To play hangman, you will be given a word you need to guess(by letter). Every time you guess a letter wrong, one part of a person will be built. If you end up guessing all the letters in the word, you win. However, if you guess too many wrong times and the person is built, you lose.\n"); 
 
