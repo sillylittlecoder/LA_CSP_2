@@ -1,4 +1,4 @@
-// HM LA Final project
+//HM and LA Final Project: Hangman Game
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
