@@ -4,12 +4,18 @@
         <title>Notes about advanced HTML</title>
         <meta charset="UTF-8">
         <!--Embeded style sheets go inside the head tag-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+NO:wght@100..400&display=swap" rel="stylesheet">
         <style>
-            *{
+            body{
                 background-color: rgba(127, 150, 255, 0.774);
+                font-family: "Playwrite NO", cursive;
+                font-optical-sizing: auto;
+                font-style: normal;
             }
             img{
-                width: 800px;
+                width: 250px;
             }
             #unordered{
                 font-family: fantasy;
@@ -32,16 +38,47 @@
                 font-size: 50px;
                 border: 3px solid white;
             }
+            .bold{
+                font-weight: bolder;
+                color: rgb(129, 8, 8);
+            }
+            #italics{
+                font-style: italic;
+            }
+            .box{
+                background-color:rgb(127, 150, 255); 
+                height: 50px; 
+                width: 100px; 
+                border: 3px solid gold;
+                font-variant: small-caps;
+                margin: 20px;
+                padding: 20px;
+            }
+            #box-wrapper{
+                display: block;
+                margin:auto;
+                width:50%;
+            }
+            #lists-wrapper{
+                display: grid;
+                grid-template-columns: 50% 50%;
+            }
+            #imgs-wrapper{
+                display: flex;
+                justify-content: center;
+            }
 
         </style>
     </head>
     <body>
-        <h1>HTML Advanced Notes</h1>
+        <h1>HTML <span id="italics">Advanced Notes</span></h1>
         <!--This has inline CSS...That is bad syntax!-->
-        <div style="background-color:rgb(127, 150, 255); height: 50px; width: 100px; border: 3px solid gold;">
+        <div id="box-wrapper">
+        <div id="box">
             <p>This is in the div</p>
         </div>
-
+    <div id="lists-wrapper">
+        </div>
         <div id="ordered">
         <p>This is how we make an ordered(numbered) list</p>
         <ol>
@@ -53,7 +90,7 @@
         </div>
 
         <div id="unordered">
-        <p>This is how we make an unordered(bulleted) list</p>
+        <p>This is how we make an <span class="bold">unordered(bulleted) list</span></p>
         <ul style="list-style-type: circle;">
             <li class="odd">Apple</li>
             <li>Orange</li>
@@ -63,7 +100,10 @@
         
         <a href="https://docs.google.com/document/d/1BngEFU6e5EiUMWgr-pN7m3eCsxkEaHGfhyHggWl32hc/edit?tab=t.0" target="_blank">W3Schools Unordered List Page</a>
         </div>
+    </div>
+    <div id="imgs-wrapper">
         <img src="https://cdn.greaterzion.com/wp-content/uploads/2014/10/15191219/5-draw-jopping-sunset-spots.jpg" alt="St George at sunset"/>
+    </div>
     </body>
 
 </html>
