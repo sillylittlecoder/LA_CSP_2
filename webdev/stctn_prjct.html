@@ -23,51 +23,66 @@
                 background-size: cover;
                 background-position: center;
             }
-            #img1{
-                width: 500px;
-            }
-            #img2{
-                width:50px;
-            }
-            #img3{
-                width:30px;
-            }
-            #img4{
-                width:50px;
-            }
             #img-wrapper{
                 display: grid;
-                grid-template-columns: 60% 40%;
-                margin:auto;
+                grid-auto-flow: column dense;
+                grid-template-columns: 50% 50%;
+                margin: 5px;
+                padding: 5px;
             }
         </style>
+        <script>function show_img(){
+            if(document.getElementById("hidden-image").style.display == "block"){
+                document.getElementById("hidden-image").style.display = "none";
+                document.getElementById("show").innerHTML = "Show Image";
+            } else {
+                document.getElementById("hidden-image").style.display = "block";
+                document.getElementById("show").innerHTML = "Hide Image";
+            }
+        }
+        function hover(){
+            document.getElementById("star-gazing").getAttribute("src") = "https://bloximages.chicago2.vip.townnews.com/stgeorgeutah.com/content/tncms/assets/v3/editorial/b/47/b474ad4c-0231-5f14-be75-6752406d9331/6617fee561a7e.image.jpg?resize=1396%2C931";
+            document.getElementById("button").style.color = "cyan";
+        }
+        function unhover(id){
+            document.getElementById(id).style.backgoundColor = "grey";
+            document.getElementById(id).style.color = "black";
+        }
+
+        </script>
     </head>
 
     <body>
         <h1>St. George: Utah's Dixie</h1>
-        <p>Whether it's a staycation, or you're coming from out of state, St. George is <i>the</i> place to visit! Known for its palm trees, red rocks, and warm weather; Utah's Dixie makes it the perfect place for explorers to find their next challenge that may turn into a yearly regular. Here, you'll find just the guide you need if you're planning to visit St. George.</p>
+        <p>Whether it's a staycation, or you're coming from out of state, St. George is <i>the</i> place to visit! Known for its palm trees, red rocks, and warm weather; Utah's Dixie makes it the perfect place for explorers to find their next challenge that may turn into a yearly regular. Here, you'll find some awesome ideas on planning a trip to St. George.</p>
         
-        <p>There are endless possibilities of the adventures you could take! Here's some of my top recommendations:</p>
+        <p>You may be wondering why you should come...and it's because there are endless possibilities of the adventures you could take! Here's some of my top recommendations:</p>
 
         <ul>
-            <li>Dune Driving/Off-roading</li>
-            <li>Zion Canyon Hot Springs</li>
-            <li>Canyon Hiking</li>
-            <li>Zion's National Park</li>
+            <li>Dune Driving/Off-roading:Adventerous off-roading with full desert vibes</li>
+            <li>Zion Canyon Hot Springs:One of the most top rated resorts! full of St. George's natural hotsprings, sauna, cold plunges, and recreated hot springs from <b>around the world</b> including places from india and japan</li>
+            <li>Canyon Hiking: There are endless spots to go hiking! You can choose the colorful Yellow Mountain, The Narrows, or endless trails up Zion's National Park</li>
+            <li>Zion's National Park: This is <i>the</i> most colorful place around St. George and it has endless adventures inside itself such as stargazing, river-rafting, and biking</li>
         </ul>
+
         <div id="img-wrapper">
-            <div id="img1">
-        <img src="https://www.pelago.com/img/products/US-United%20States/sand-hollow-dune-tour/3d957f66-a48d-4428-8683-17a13e0b8165_sand-hollow-dune-tour.jpg" alt="Dune Driving in St. George"/>
+            <div id="left-clmn">
+        <img src="https://www.pelago.com/img/products/US-United%20States/sand-hollow-dune-tour/3d957f66-a48d-4428-8683-17a13e0b8165_sand-hollow-dune-tour.jpg" alt="Dune Driving in St. George" width=""/>
+
+        <img src="https://cdn.sanity.io/images/lzou7os1/production/e41fe7c554f4e9e5cc4233c2b4e8f91ba23f354e-5464x3640.jpg?w=1200" alt="Zion Canyon Hot Springs" width="720" height="auto"/>
             </div>
-            <div id="img2">
-        <img src="https://cdn.sanity.io/images/lzou7os1/production/e41fe7c554f4e9e5cc4233c2b4e8f91ba23f354e-5464x3640.jpg?w=1200" alt="Zion Canyon Hot Springs"/>
-            </div>
-            <div id="img3">
-        <img src="https://eastzionadventures.com/wp-content/uploads/2020/09/032A8731-WaltersWiggles-A-72.jpg" alt="Canyon Hiking in St. George"/>
-            </div>
-            <div id="img4">
-        <img src="https://afar.brightspotcdn.com/dims4/default/1245845/2147483647/strip/true/crop/5468x2901+0+372/resize/1440x764!/quality/90/?url=https%3A%2F%2Fk3-prod-afar-media.s3.us-west-2.amazonaws.com%2Fbrightspot%2F4a%2Feb%2F364a143a4374ad8e9ee64454e34d%2Fshutterstock-473344471.jpg"/>
+
+            <div id="right-clmn">
+        <img src="https://www.hikespeak.com/img/Utah/Zion/AngelsLanding/Angels_Landing_Trail.jpg" alt="Canyon Hiking in St. George" width="" height="480" onmouseover="this.src='https://usadventurer.com/wp-content/uploads/2024/02/narrows-slot-canyon-hike-zion.jpg'"
+            onmouseout="this.src='https://i.redd.it/zreh3p9j4d031.jpg'"/>
+
+        <img src="https://lirp.cdn-website.com/56410926/dms3rep/multi/opt/DSC09379-640w.jpg" alt="Zion's National Park" width="" height="480"/>
             </div>
         </div>
+        
+        <h2 id="change" onmouseover="popup()">Go on, take your next adventure</h2>
+        <button onclick="show_img()" id="show" onmouseover="hover('show')">Show Image</button>
+        <div id="hidden-image">
+            <img src= "https://blog.skywest.com/wp-content/uploads/2015/06/CDC_62084361_AS_small.png" height="500px">
     </body>
 </html>
